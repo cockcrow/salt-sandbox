@@ -1,2 +1,5 @@
-base/*
+# Vagrant virtual machines
 .vagrant
+
+# Visual Studio Code editor settings
+.vscode
