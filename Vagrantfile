@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     master_config.vm.box = CENTOS_IMAGE
     master_config.vm.host_name = "salt.#{EXAMPLE_DOMAIN}"
     master_config.vm.network :private_network, ip: "172.16.42.10"
-    master_config.vm.synced_folder "salt-root", "/srv"
+    master_config.vm.synced_folder "salt_roots", "/srv"
     master_config.vm.provision :salt do |salt|
       salt.install_master = true
       salt.install_type = "stable"
