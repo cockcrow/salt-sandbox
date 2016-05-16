@@ -8,6 +8,7 @@ EXAMPLE_DOMAIN = "example.com"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # vagrant-hosts plugin provision
+  # See: https://github.com/oscar-stack/vagrant-hosts
   config.vm.provision :hosts do |hosts|
     hosts.add_host "172.16.42.10", ["salt.#{EXAMPLE_DOMAIN}", "salt", "master"]
     hosts.add_host "172.16.42.11", ["minion1.#{EXAMPLE_DOMAIN}", "minion1"]
